@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  
+  <script>
+    function validateform() {
+      var name = document.myform.name.value;
+      var password = document.myform.password.value;
+
+      if (name == null || name == "") {
+        alert("Name can't be blank");
+        return false;
+      } else if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+    }
+  </script>
+
+
+
+  <body>
+
+    <div class="mainscreen">
+      <div class="toppart">
+        <div class="herotext">
+          <h1>
+            <img
+              class="logo"
+              src="https://cutewallpaper.org/24/fifa-logo-png/1588930081.jpg"
+              alt="Logo"
+            />
+            Football League Management System ⚽
+          </h1>
+        </div>
+      </div>
+      <div class="bottompart">
+        <div class="imgpart">
+          <img
+            class="heroimg"
+            src="https://cutewallpaper.org/24/fifa-logo-png/1588930081.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="formpart">
+          <form
+            action="http://www.javatpoint.com/javascriptpages/valid.jsp"
+            onsubmit="validateform()">
+            <h2>Please Login</h2>
+
+            <label for="username">Username</label>
+            <input
+              type="text"
+              class="inputbox"
+              name="username"
+              autocomplete="off"
+              required
+            />
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="inputbox"
+              name="password"
+              class="password"
+              autocomplete="off"
+              required
+            />
+            <button class="submitbtn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
